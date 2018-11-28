@@ -16,5 +16,22 @@ namespace Catering_Coodinator_MVC.Controllers
             var model = new FoodListItem[0];
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(FoodCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
+
     }
 }

@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CateringCoordinator.Data\CateringCoordinator.Data.csproj">
+      <Project>{6e1f5521-aeb6-4b73-bc02-253ab44257d6}</Project>
+      <Name>CateringCoordinator.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CateringCoordinator.Models\CateringCoordinator.Models.csproj">
+      <Project>{b823d7c0-4203-410f-844d-3598db2cd278}</Project>
+      <Name>CateringCoordinator.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
