@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Catering_Coodinator_MVC.Models;
+using CateringCoodinator.Data;
 
 namespace Catering_Coodinator_MVC
 {
@@ -54,7 +55,7 @@ namespace Catering_Coodinator_MVC
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
+                RequireNonLetterOrDigit = false,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,

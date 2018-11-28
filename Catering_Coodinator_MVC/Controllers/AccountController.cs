@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Catering_Coodinator_MVC.Models;
+using CateringCoodinator.Data;
 
 namespace Catering_Coodinator_MVC.Controllers
 {

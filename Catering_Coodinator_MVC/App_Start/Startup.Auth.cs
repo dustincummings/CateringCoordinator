@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Catering_Coodinator_MVC.Models;
+using CateringCoodinator.Data;
 
 namespace Catering_Coodinator_MVC
 {
