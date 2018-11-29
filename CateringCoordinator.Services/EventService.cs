@@ -55,6 +55,8 @@ namespace CateringCoordinator.Services
                         new EventList
                         {
                             EventId = e.EventId,
+                            Customer = e.Customer,                           
+                            Foods =  e.Foods,                         
                             PrepArea = e.PrepArea,
                             NumOfGuest = e.NumOfGuest,
                             NumOfHelpers = e.NumOfHelpers,

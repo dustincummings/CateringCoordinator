@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerCreate.cs" />
+    <Compile Include="CustomerDetail.cs" />
+    <Compile Include="CustomerEdit.cs" />
     <Compile Include="CustomerList.cs" />
     <Compile Include="EventCreate.cs" />
     <Compile Include="EventList.cs" />
@@ -65,6 +67,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CateringCoordinator.Data\CateringCoordinator.Data.csproj">
+      <Project>{6E1F5521-AEB6-4B73-BC02-253AB44257D6}</Project>
+      <Name>CateringCoordinator.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

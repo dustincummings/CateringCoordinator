@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-    class CustomerService
+    public class CustomerService
     {
         private readonly Guid _userId;
 
@@ -23,7 +23,8 @@ namespace CateringCoordinator.Services
             var entity =
                 new Customer()
                 {
-                    OwnerId = _userId,
+                    OwnerId = _userId, 
+                   
                     LastName = model.LastName,
                     FirstName = model.FirstName,
                 };
@@ -47,11 +48,62 @@ namespace CateringCoordinator.Services
                         new CustomerList
                         {
                             CustomerId = e.CustomerId,
+                           // Event = e.Event.Location,
                             LastName = e.LastName,
                             FirstName = e.FirstName,
                         }
                       );
                 return query.ToArray();
+            }
+        }
+
+        public CustomerDetail GetCustomerById(int customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerId == customerId && e.OwnerId == _userId);
+                return
+                    new CustomerDetail
+                    {
+                        CustomerId = entity.CustomerId,
+                        
+                        LastName = entity.LastName,
+                        FirstName = entity.FirstName,
+                    };
+            }
+        }
+
+        public bool UpdateCustomer(CustomerEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Customers
+                    .Single(e => e.CustomerId == model.CustomerId && e.OwnerId == _userId);
+
+                
+                entity.LastName = model.LastName;
+                entity.FirstName = model.FirstName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCustomer(int customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Customers
+                    .Single(e => e.CustomerId == customerId && e.OwnerId == _userId);
+                ctx.Customers.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

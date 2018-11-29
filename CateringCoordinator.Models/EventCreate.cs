@@ -9,6 +9,7 @@ namespace CateringCoordinator.Models
 {
     public class EventCreate
     {
+        public int CustomerId { get; set; }
         public int FoodId { get; set; }
         [Display(Name = "Preparing on Site")]
         public bool PrepArea { get; set; }

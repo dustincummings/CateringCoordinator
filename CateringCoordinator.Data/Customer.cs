@@ -13,11 +13,12 @@ namespace CateringCoordinator.Data
         public int CustomerId { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
+        
         [Required]
         public string LastName { get; set; }
         [Required]
         public string FirstName { get; set; }
-
-        public virtual ICollection<Event>Events { get; set; }
+ 
+       
     }
 }

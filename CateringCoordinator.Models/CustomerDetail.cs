@@ -8,17 +8,16 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Models
 {
-    public class CustomerCreate
+    public class CustomerDetail
     {
         
-        [Required]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-        [Required]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        public int CustomerId { get; set; }
+        [Display(Name ="Event")]
         public int EventId { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
 
         public virtual Event Event { get; set; }
+
     }
 }
