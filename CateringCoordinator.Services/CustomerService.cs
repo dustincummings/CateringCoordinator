@@ -9,61 +9,50 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-
-    public class FoodService
+    class CustomerService
     {
         private readonly Guid _userId;
 
-        public FoodService(Guid userId)
+        public CustomerService(Guid userId)
         {
             _userId = userId;
         }
 
-        public bool CreateFood(FoodCreate model)
+        public bool CreateCustomer(CustomerCreate model)
         {
             var entity =
-                new Food()
+                new Customer()
                 {
                     OwnerId = _userId,
-                    Name = model.Name,
-                    Description = model.Description,
-                    Ingrediants = model.Ingrediants,
-                    Cost = model.Cost,
-                    Allergens = model.Allergens,
-                    Servings = model.Servings,
+                    LastName = model.LastName,
+                    FirstName = model.FirstName,
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Foods.Add(entity);
+                ctx.Customers.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<FoodListItem> GetFoods()
+        public IEnumerable<CustomerList> GetCustomers()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .Foods
+                    .Customers
                     .Where(e => e.OwnerId == _userId)
                     .Select(
                         e =>
-                        new FoodListItem
+                        new CustomerList
                         {
-                            FoodId = e.FoodId,
-                            Name = e.Name,
-                            Description = e.Description,
-                            Ingrediants = e.Ingrediants,
-                            Cost = e.Cost,
-                            Allergens = e.Allergens,
-                            Servings = e.Servings,
+                            CustomerId = e.CustomerId,
+                            LastName = e.LastName,
+                            FirstName = e.FirstName,
                         }
                       );
                 return query.ToArray();
             }
         }
     }
-    
-    
 }

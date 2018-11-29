@@ -11,7 +11,8 @@ namespace CateringCoordinator.Data
     {
         [Key]
         public int EventId { get; set; }
-        
+        [Required]
+        public Guid OwnerId { get; set; }
         [Required]
         public int CustomerId { get; set; }
         [Required]
