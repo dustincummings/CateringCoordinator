@@ -56,6 +56,46 @@ namespace Catering_Coodinator_MVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit (int id)
+        {
+            var service = CreateFoodService();
+            var detail = service.GetFoodById(id);
+            var model =
+                new FoodEdit
+                {
+                    FoodId = detail.FoodId,
+                    Name = detail.Name,
+                    Description = detail.Description,
+                    Ingrediants = detail.Ingrediants,
+                    Cost = detail.Cost,
+                    Allergens = detail.Allergens,
+                    Servings = detail.Servings,
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, FoodEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.FoodId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            var service = CreateFoodService();
+
+            if (service.UpdateFoods(model))
+            {
+                TempData["SaveResult"] = " Your food was updated.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your food could not be updated");
+            return View(model);
+        }
+
         private FoodService CreateFoodService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

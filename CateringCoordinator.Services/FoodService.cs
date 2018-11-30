@@ -87,6 +87,27 @@ namespace CateringCoordinator.Services
                     };
             }
         }
+
+        public bool UpdateFoods(FoodEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Foods
+                    .Single(e => e.FoodId == model.FoodId && e.OwnerId == _userId);
+
+                entity.Name = model.Name;
+                entity.Description = model.Description;
+                entity.Ingrediants = model.Ingrediants;
+                entity.Cost = model.Cost;
+                entity.Allergens = model.Allergens;
+                entity.Servings = entity.Servings;
+
+                return ctx.SaveChanges() == 1;
+
+            }
+        }
     }
     
     

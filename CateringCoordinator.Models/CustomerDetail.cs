@@ -15,8 +15,10 @@ namespace CateringCoordinator.Models
         public int CustomerId { get; set; }
         [Display(Name ="Event")]
         public int EventId { get; set; }
-        public string LastName { get; set; }
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
         public virtual Event Event { get; set; }
 

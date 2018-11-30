@@ -62,6 +62,7 @@
     <Compile Include="EventList.cs" />
     <Compile Include="FoodCreate.cs" />
     <Compile Include="FoodDetail.cs" />
+    <Compile Include="FoodEdit.cs" />
     <Compile Include="FoodListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
