@@ -69,7 +69,6 @@ namespace CateringCoordinator.Services
                     new CustomerDetail
                     {
                         CustomerId = entity.CustomerId,
-                        
                         LastName = entity.LastName,
                         FirstName = entity.FirstName,
                     };

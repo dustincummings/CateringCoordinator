@@ -63,6 +63,30 @@ namespace CateringCoordinator.Services
                 return query.ToArray();
             }
         }
+
+        public FoodDetail GetFoodById(int foodId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Foods
+                        .Single(e => e.FoodId == foodId && e.OwnerId == _userId);
+                return
+                    new FoodDetail
+                    {
+                        FoodId = entity.FoodId,
+                        Name = entity.Name,
+                        Description = entity.Description,
+                        Ingrediants = entity.Ingrediants,
+                        Cost = entity.Cost,
+                        Allergens = entity.Allergens,
+                        Servings = entity.Servings,
+
+                        
+                    };
+            }
+        }
     }
     
     

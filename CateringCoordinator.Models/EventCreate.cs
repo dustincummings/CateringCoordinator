@@ -26,5 +26,7 @@ namespace CateringCoordinator.Models
         public DateTime DateOfEvent { get; set; }
         [Display(Name = "Event Cost")]
         public decimal CostOfEvent { get; set; }
+
+
     }
 }
