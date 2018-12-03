@@ -1,0 +1,98 @@
+﻿@model CateringCoordinator.Models.EventDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EventDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoodId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoodId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrepArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrepArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfGuest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfGuest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfHelpers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfHelpers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuppliesNeeded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuppliesNeeded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFullService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFullService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfEvent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostOfEvent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostOfEvent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

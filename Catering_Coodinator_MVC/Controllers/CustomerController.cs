@@ -59,12 +59,6 @@ namespace Catering_Coodinator_MVC.Controllers
             return View(model);
         }
 
-        private CustomerService CreateCustomerService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new CustomerService(userId);
-            return service;
-        }
 
         public ActionResult Edit(int id)
         {
@@ -95,10 +89,10 @@ namespace Catering_Coodinator_MVC.Controllers
 
             if (service.UpdateCustomer(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
+                TempData["SaveResult"] = "Your customer was updated.";
                 return RedirectToAction("Index");
             }
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your customer could not be updated.");
             return View(model);
         }
 
@@ -119,10 +113,16 @@ namespace Catering_Coodinator_MVC.Controllers
 
             service.DeleteCustomer(id);
 
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your customer was deleted";
             return RedirectToAction("Index");
         }
 
         
+        private CustomerService CreateCustomerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerService(userId);
+            return service;
+        }
     }
 }

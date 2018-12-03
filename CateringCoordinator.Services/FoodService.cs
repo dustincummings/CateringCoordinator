@@ -108,6 +108,19 @@ namespace CateringCoordinator.Services
 
             }
         }
+
+        public bool DeleteFood (int foodId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Foods
+                    .Single(e => e.FoodId == foodId && e.OwnerId == _userId);
+                ctx.Foods.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
     
     

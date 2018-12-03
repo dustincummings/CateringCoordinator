@@ -31,7 +31,7 @@ namespace Catering_Coodinator_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(FoodCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
 
@@ -95,6 +95,30 @@ namespace Catering_Coodinator_MVC.Controllers
             ModelState.AddModelError("", "Your food could not be updated");
             return View(model);
         }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateFoodService();
+            var model = svc.GetFoodById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateFoodService();
+
+            service.DeleteFood(id);
+
+            TempData["SaveResult"] = "Your food was deleted";
+
+            return RedirectToAction("Index");
+        }
+
 
         private FoodService CreateFoodService()
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-    class EventService
+    public class EventService
     {
         private readonly Guid _userId;
 
@@ -68,6 +68,71 @@ namespace CateringCoordinator.Services
                         }
                      );
                 return query.ToArray();
+            }
+        }
+
+        public EventDetail GetEventById(int eventId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = 
+                    ctx 
+                     .Events
+                     .Single(e => e.EventId == eventId && e.OwnerId ==_userId);
+                return
+                    new Models.EventDetail
+                    {
+                        EventId = entity.EventId,
+                        CustomerId = entity.CustomerId,
+                        FoodId = entity.FoodId,
+                        PrepArea = entity.PrepArea,
+                        NumOfGuest = entity.NumOfGuest,
+                        NumOfHelpers = entity.NumOfHelpers,
+                        SuppliesNeeded = entity.SuppliesNeeded,
+                        Location = entity.Location,
+                        IsFullService = entity.IsFullService,
+                        DateOfEvent = entity.DateOfEvent.Date,
+                        CostOfEvent = entity.CostOfEvent,
+
+                    };
+            }
+        }
+        public bool UpdateEvent(EventEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Events
+                    .Single(e => e.EventId == model.EventId && e.OwnerId == _userId);
+
+                entity.CustomerId = model.CustomerId;
+                entity.FoodId = model.FoodId;
+                entity.PrepArea = model.PrepArea;
+                entity.NumOfGuest = model.NumOfGuest;
+                entity.NumOfHelpers = model.NumOfHelpers;
+                entity.SuppliesNeeded = model.SuppliesNeeded;
+                entity.Location = model.Location;
+                entity.IsFullService = model.IsFullService;
+                entity.DateOfEvent = model.DateOfEvent;
+                entity.CostOfEvent = model.CostOfEvent;
+
+                return ctx.SaveChanges() == 1;
+
+            }
+        }
+        public bool DeleteEvent(int eventId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Events
+                    .Single(e => e.EventId == eventId && e.OwnerId == _userId);
+
+                ctx.Events.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

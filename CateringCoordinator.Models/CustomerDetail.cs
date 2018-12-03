@@ -11,7 +11,7 @@ namespace CateringCoordinator.Models
     public class CustomerDetail
     {
       
-
+        [Display(Name ="Customer Id")]
         public int CustomerId { get; set; }
         [Display(Name ="Event")]
         public int EventId { get; set; }
