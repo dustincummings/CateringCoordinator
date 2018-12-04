@@ -18,6 +18,18 @@ namespace CateringCoordinator.Data
         [Required]
         public string FirstName { get; set; }
  
-       private ICollection<Event> Events { get; set; }
+       public ICollection<Event> Events { get; set; }
+
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return LastName + "," + FirstName;
+            }
+        }
+
+        public override string ToString() => FullName;
+       
     }
 }

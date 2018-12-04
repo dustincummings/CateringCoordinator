@@ -10,7 +10,9 @@ using System.Web.Mvc;
 namespace Catering_Coodinator_MVC.Controllers
 {
     public class EventController : Controller
+
     {
+        
         [Authorize]
         // GET: Event
         public ActionResult Index()
@@ -24,8 +26,29 @@ namespace Catering_Coodinator_MVC.Controllers
 
         public ActionResult Create()
         {
+            var customerService = CreateCustomerService();
+            var foodService = CreateFoodService();
+
+
             return View();
         }
+
+        private FoodService CreateFoodService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new FoodService(userId);
+            return service;
+
+        }
+
+        private CustomerService CreateCustomerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerService(userId);
+            return service;
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(EventCreate model)
@@ -53,32 +76,28 @@ namespace Catering_Coodinator_MVC.Controllers
             return service;
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int eventId, int foodId, int customerId)
         {
             var svc = CreateEventService();
-            var model = svc.GetEventById(id);
+            var model = svc.GetEventById(eventId, foodId, customerId);
 
             return View(model);
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int eventId, int foodId, int customerId)
         {
             var service = CreateEventService();
-            var detail = service.GetEventById(id);
+            var detail = service.GetEventById(eventId, foodId, customerId);
             var model =
                 new EventEdit
                 {
                     EventId = detail.EventId,
                     CustomerId = detail.CustomerId,
+                   
                     FoodId = detail.FoodId,
-                    PrepArea = detail.PrepArea,
                     NumOfGuest = detail.NumOfGuest,
-                    NumOfHelpers = detail.NumOfHelpers,
-                    SuppliesNeeded = detail.SuppliesNeeded,
                     Location = detail.Location,
-                    IsFullService = detail.IsFullService,
                     DateOfEvent = detail.DateOfEvent,
-                    CostOfEvent = detail.CostOfEvent,
 
                 };
             return View(model);
@@ -106,10 +125,10 @@ namespace Catering_Coodinator_MVC.Controllers
             return View(model);
         }
         [ActionName("Delete")]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int eventId, int foodId, int customerId)
         {
             var svc = CreateEventService();
-            var model = svc.GetEventById(id);
+            var model = svc.GetEventById(eventId, foodId, customerId);
 
             return View(model);
         }

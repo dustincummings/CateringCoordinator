@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201811292146382_thirdmigration.Designer.cs">
       <DependentUpon>201811292146382_thirdmigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812041546380_tookoutproperties.cs" />
+    <Compile Include="Migrations\201812041546380_tookoutproperties.Designer.cs">
+      <DependentUpon>201812041546380_tookoutproperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811292146382_thirdmigration.resx">
       <DependentUpon>201811292146382_thirdmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041546380_tookoutproperties.resx">
+      <DependentUpon>201812041546380_tookoutproperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
