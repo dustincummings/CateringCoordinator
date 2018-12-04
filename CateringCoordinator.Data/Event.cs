@@ -13,7 +13,7 @@ namespace CateringCoordinator.Data
         public int EventId { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
-        [Required]
+        //[Required]
         public int CustomerId { get; set; }
         public int FoodId { get; set; }
         [Required]

@@ -54,7 +54,7 @@ namespace CateringCoordinator.Services
                             Foods =  e.Foods,                         
                             NumOfGuest = e.NumOfGuest,
                             Location = e.Location,
-                            DateOfEvent = e.DateOfEvent.Date,
+                            //DateOfEvent = e.DateOfEvent.Date,
                         }
                      );
                 return query.ToArray();
@@ -86,7 +86,7 @@ namespace CateringCoordinator.Services
                         FoodId= foodEntity.FoodId,
                         
                         
-                        Customer = customerEntity.CustomerId, 
+                        LastName = customerEntity.LastName, 
                         NumOfGuest = entity.NumOfGuest,
                         Location = entity.Location,
                         DateOfEvent = entity.DateOfEvent.Date,

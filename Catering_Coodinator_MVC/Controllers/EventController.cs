@@ -1,4 +1,5 @@
-﻿using CateringCoordinator.Models;
+﻿using CateringCoordinator.Data;
+using CateringCoordinator.Models;
 using CateringCoordinator.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -10,7 +11,6 @@ using System.Web.Mvc;
 namespace Catering_Coodinator_MVC.Controllers
 {
     public class EventController : Controller
-
     {
         
         [Authorize]
@@ -27,9 +27,11 @@ namespace Catering_Coodinator_MVC.Controllers
         public ActionResult Create()
         {
             var customerService = CreateCustomerService();
+            var customers = customerService.GetCustomers();
             var foodService = CreateFoodService();
-
-
+            var foods = foodService.GetFoods();
+            ViewBag.FoodId =  new SelectList(foods, "FoodId", "Name");
+            ViewBag.CustomerId = new SelectList(customers, "CustomerId", "LastName");
             return View();
         }
 
