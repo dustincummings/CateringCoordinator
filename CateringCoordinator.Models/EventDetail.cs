@@ -16,10 +16,10 @@ namespace CateringCoordinator.Models
         public string FullName { get; set; }
         [Display(Name = "# of Guests")]
         public int NumOfGuest { get; set; }
-        [Display(Name = " Last Name")]
-        public string LastName { get; set; }
+        //[Display(Name = " Last Name")]
+        //public string LastName { get; set; }
         [Display(Name="Food Name")]
-        public string Name { get; set; }
+        public string FoodName { get; set; }
         public string Location { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]

@@ -102,7 +102,7 @@ namespace CateringCoordinator.Services
                 entity.Ingrediants = model.Ingrediants;
                 entity.Cost = model.Cost;
                 entity.Allergens = model.Allergens;
-                entity.Servings = entity.Servings;
+                entity.Servings = model.Servings;
 
                 return ctx.SaveChanges() == 1;
 

@@ -48,7 +48,7 @@ namespace CateringCoordinator.Services
                         new CustomerList
                         {
                             CustomerId = e.CustomerId,
-                           // Event = e.Event.Location,
+                            //Event = e.Event.Location,
                             LastName = e.LastName,
                             FirstName = e.FirstName,
                         }
