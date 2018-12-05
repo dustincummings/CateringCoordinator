@@ -22,7 +22,7 @@ namespace CateringCoordinator.Models
         [Display(Name = "# of Guests")]
         public int NumOfGuest { get; set; }
         public string Location { get; set; }
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of Event")]
         public DateTime? DateOfEvent { get; set; }

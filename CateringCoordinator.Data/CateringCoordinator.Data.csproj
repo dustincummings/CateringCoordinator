@@ -58,11 +58,42 @@
     <Compile Include="Event.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201812041927115_InitialCreate.cs" />
+    <Compile Include="Migrations\201812041927115_InitialCreate.Designer.cs">
+      <DependentUpon>201812041927115_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051915149_firstmigration.cs" />
+    <Compile Include="Migrations\201812051915149_firstmigration.Designer.cs">
+      <DependentUpon>201812051915149_firstmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051920351_fixdatabase.cs" />
+    <Compile Include="Migrations\201812051920351_fixdatabase.Designer.cs">
+      <DependentUpon>201812051920351_fixdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051927467_redidwhatiremoved.cs" />
+    <Compile Include="Migrations\201812051927467_redidwhatiremoved.Designer.cs">
+      <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812041927115_InitialCreate.resx">
+      <DependentUpon>201812041927115_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051915149_firstmigration.resx">
+      <DependentUpon>201812051915149_firstmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051920351_fixdatabase.resx">
+      <DependentUpon>201812051920351_fixdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051927467_redidwhatiremoved.resx">
+      <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -94,8 +94,8 @@ namespace Catering_Coodinator_MVC.Controllers
                 new EventEdit
                 {
                     EventId = detail.EventId,
-                    Customer = detail.Customer,                   
-                    Food = detail.Food,
+                    FullName  = detail.FullName,                   
+                    Name = detail.FoodName,
                     NumOfGuest = detail.NumOfGuest,
                     Location = detail.Location,
                     DateOfEvent = detail.DateOfEvent,

@@ -85,8 +85,8 @@ namespace CateringCoordinator.Services
                     new EventDetail
                     {
                         EventId = entity.EventId,
-                        Food = entity.Food,
-                        Customer = entity.Customer,
+                        FoodName = entity.Food.Name,
+                        FullName = entity.Customer.FullName,
                         NumOfGuest = entity.NumOfGuest,
                         Location = entity.Location,
                         DateOfEvent = entity.DateOfEvent,
@@ -113,8 +113,8 @@ namespace CateringCoordinator.Services
                     .Single(c => c.CustomerId == model.CustomerId && c.OwnerId == _userId);
 
 
-                customerEntity.LastName = model.LastName;
-                foodEntity.Name = model.Name;
+                customerEntity.LastName  = model.Customer.LastName;
+                foodEntity.Name = model.Food.Name;
                 entity.NumOfGuest = model.NumOfGuest;
                 entity.Location = model.Location;
                 entity.DateOfEvent = model.DateOfEvent;

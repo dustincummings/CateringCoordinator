@@ -17,8 +17,7 @@ namespace CateringCoordinator.Data
         public string LastName { get; set; }
         [Required]
         public string FirstName { get; set; }
- 
-       public ICollection<Event> Events { get; set; }
+
 
         [Display(Name = "Customer")]
         public string FullName
@@ -27,9 +26,11 @@ namespace CateringCoordinator.Data
             {
                 return LastName + "," + FirstName;
             }
+          
         }
+    public ICollection<Event> Events { get; set; }
 
-        
-       
+
     }
 }
+
