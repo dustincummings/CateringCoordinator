@@ -14,6 +14,7 @@ namespace CateringCoordinator.Data
         [Required]
         public Guid OwnerId { get; set; }
         [Required]
+        [Display(Name="Food")]
         public string Name { get; set; }
         
         [Required]

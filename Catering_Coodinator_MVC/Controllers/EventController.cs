@@ -31,7 +31,7 @@ namespace Catering_Coodinator_MVC.Controllers
             var foodService = CreateFoodService();
             var foods = foodService.GetFoods();
             ViewBag.FoodId =  new SelectList(foods, "FoodId", "Name");
-            ViewBag.CustomerId = new SelectList(customers, "CustomerId", "LastName");
+            ViewBag.CustomerId = new SelectList(customers, "CustomerId","FullName");
             return View();
         }
 
@@ -94,8 +94,7 @@ namespace Catering_Coodinator_MVC.Controllers
                 new EventEdit
                 {
                     EventId = detail.EventId,
-                    CustomerId = detail.CustomerId,
-                   
+                    CustomerId = detail.CustomerId,                   
                     FoodId = detail.FoodId,
                     NumOfGuest = detail.NumOfGuest,
                     Location = detail.Location,

@@ -20,7 +20,7 @@ namespace CateringCoordinator.Data
  
        public ICollection<Event> Events { get; set; }
 
-        [Display(Name = "Full Name")]
+        [Display(Name = "Customer")]
         public string FullName
         {
             get
@@ -29,7 +29,7 @@ namespace CateringCoordinator.Data
             }
         }
 
-        public override string ToString() => FullName;
+        
        
     }
 }

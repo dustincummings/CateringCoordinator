@@ -58,49 +58,11 @@
     <Compile Include="Event.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201811272109516_InitialCreate.cs" />
-    <Compile Include="Migrations\201811272109516_InitialCreate.Designer.cs">
-      <DependentUpon>201811272109516_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811281906099_initialmigration.cs" />
-    <Compile Include="Migrations\201811281906099_initialmigration.Designer.cs">
-      <DependentUpon>201811281906099_initialmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811291634318_update-database.cs" />
-    <Compile Include="Migrations\201811291634318_update-database.Designer.cs">
-      <DependentUpon>201811291634318_update-database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811292146382_thirdmigration.cs" />
-    <Compile Include="Migrations\201811292146382_thirdmigration.Designer.cs">
-      <DependentUpon>201811292146382_thirdmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812041546380_tookoutproperties.cs" />
-    <Compile Include="Migrations\201812041546380_tookoutproperties.Designer.cs">
-      <DependentUpon>201812041546380_tookoutproperties.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811272109516_InitialCreate.resx">
-      <DependentUpon>201811272109516_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811281906099_initialmigration.resx">
-      <DependentUpon>201811281906099_initialmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811291634318_update-database.resx">
-      <DependentUpon>201811291634318_update-database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811292146382_thirdmigration.resx">
-      <DependentUpon>201811292146382_thirdmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041546380_tookoutproperties.resx">
-      <DependentUpon>201812041546380_tookoutproperties.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
