@@ -54,7 +54,7 @@ namespace CateringCoordinator.Services
                         {
                             EventId = e.EventId,
                             Customer = e.Customer,
-                            Food = e.Food,
+                            FoodName = e.Food.Name,
                             NumOfGuest = e.NumOfGuest,
                             Location = e.Location,
                             DateOfEvent = e.DateOfEvent,
@@ -64,7 +64,7 @@ namespace CateringCoordinator.Services
             }
         }
 
-        public EventDetail GetEventById(int eventId, int foodId,  int customerId)
+        public EventDetail GetEventById(int eventId)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -73,20 +73,20 @@ namespace CateringCoordinator.Services
                      .Events
                      .Single(e => e.EventId == eventId && e.OwnerId == _userId);
 
-                var foodEntity =
-                    ctx
-                    .Foods
-                    .Single(f => f.FoodId== foodId && f.OwnerId == _userId);
-                var customerEntity =
-                    ctx
-                    .Customers
-                    .Single(c => c.CustomerId == customerId && c.OwnerId == _userId);
+                //var foodEntity =
+                //    ctx
+                //    .Foods
+                //    .Single(f => f.FoodId== foodId && f.OwnerId == _userId);
+                //var customerEntity =
+                //    ctx
+                //    .Customers
+                //    .Single(c => c.CustomerId == customerId && c.OwnerId == _userId);
                 return
                     new EventDetail
                     {
                         EventId = entity.EventId,
-                        Name = foodEntity.Name,
-                        FullName = customerEntity.FullName,
+                        Name = entity.Food.Name,
+                        FullName = entity.Customer.FullName,
                         NumOfGuest = entity.NumOfGuest,
                         Location = entity.Location,
                         DateOfEvent = entity.DateOfEvent,
@@ -94,6 +94,7 @@ namespace CateringCoordinator.Services
                     };
             }
         }
+
         public bool UpdateEvent(EventEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -112,7 +113,7 @@ namespace CateringCoordinator.Services
                     .Single(c => c.CustomerId == model.CustomerId && c.OwnerId == _userId);
 
 
-                customerEntity.LastName  = model.LastName;
+                customerEntity.LastName = model.FullName;
                 foodEntity.Name = model.Name;
                 entity.NumOfGuest = model.NumOfGuest;
                 entity.Location = model.Location;

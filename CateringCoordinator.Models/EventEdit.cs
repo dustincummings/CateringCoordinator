@@ -17,6 +17,8 @@ namespace CateringCoordinator.Models
         public string Name { get; set; }
         [Display(Name = " Last Name")]
         public string LastName { get; set; }
+
+        public string FullName { get; set; }
         [Display(Name = "# of Guests")]
         public int NumOfGuest { get; set; }
         public string Location { get; set; }

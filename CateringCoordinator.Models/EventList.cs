@@ -13,10 +13,11 @@ namespace CateringCoordinator.Models
         public int EventId { get; set; }
         public int CustomerId { get; set; }
         public int FoodId { get; set; }
+        public string CustomerName { get; set; }
         [Display(Name ="Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Food")]
-        public int Name { get; set; }
+        public string FoodName { get; set; }
         [Display(Name ="# of Guests")]
         public int NumOfGuest { get; set; }
         public string Location { get; set; }

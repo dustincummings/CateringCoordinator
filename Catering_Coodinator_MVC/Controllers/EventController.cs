@@ -78,18 +78,18 @@ namespace Catering_Coodinator_MVC.Controllers
             return service;
         }
 
-        public ActionResult Details(int eventId, int foodId, int customerId)
+        public ActionResult Details(int id)
         {
             var svc = CreateEventService();
-            var model = svc.GetEventById(eventId, foodId, customerId);
+            var model = svc.GetEventById(id);
 
             return View(model);
         }
 
-        public ActionResult Edit(int eventId, int foodId, int customerId)
+        public ActionResult Edit(int id)
         {
             var service = CreateEventService();
-            var detail = service.GetEventById(eventId, foodId, customerId);
+            var detail = service.GetEventById(id);
             var model =
                 new EventEdit
                 {
@@ -126,10 +126,10 @@ namespace Catering_Coodinator_MVC.Controllers
             return View(model);
         }
         [ActionName("Delete")]
-        public ActionResult Delete(int eventId, int foodId, int customerId)
+        public ActionResult Delete(int id)
         {
             var svc = CreateEventService();
-            var model = svc.GetEventById(eventId, foodId, customerId);
+            var model = svc.GetEventById(id);
 
             return View(model);
         }
