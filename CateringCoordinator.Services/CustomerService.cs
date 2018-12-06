@@ -24,7 +24,7 @@ namespace CateringCoordinator.Services
                 new Customer()
                 {
                     OwnerId = _userId, 
-                   
+                    
                     LastName = model.LastName,
                     FirstName = model.FirstName,
                 };

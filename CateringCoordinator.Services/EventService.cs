@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-    public class EventService
+    public class EventService 
     {
         private readonly Guid _userId;
 
@@ -55,6 +55,8 @@ namespace CateringCoordinator.Services
                             EventId = e.EventId,
                             Customer = e.Customer,
                             FoodName = e.Food.Name,
+                            FoodId = e.FoodId,
+                            CustomerId =e.CustomerId,
                             NumOfGuest = e.NumOfGuest,
                             Location = e.Location,
                             DateOfEvent = e.DateOfEvent,
@@ -76,11 +78,11 @@ namespace CateringCoordinator.Services
                 //var foodEntity =
                 //    ctx
                 //    .Foods
-                //    .Single(f => f.FoodId== foodId && f.OwnerId == _userId);
+                //    .Single(f => f.FoodId == foodId && f.OwnerId == _userId);
                 //var customerEntity =
                 //    ctx
                 //    .Customers
-                //    .Single(c => c.CustomerId == customerId && c.OwnerId == _userId);
+                //    .Single(c => c.CustomerId == custId && c.OwnerId == _userId);
                 return
                     new EventDetail
                     {
@@ -90,6 +92,9 @@ namespace CateringCoordinator.Services
                         NumOfGuest = entity.NumOfGuest,
                         Location = entity.Location,
                         DateOfEvent = entity.DateOfEvent,
+                        FoodId = entity.Food.FoodId,
+                        CustomerId=entity.Customer.CustomerId,
+                      
 
                     };
             }
@@ -114,7 +119,7 @@ namespace CateringCoordinator.Services
 
 
                 customerEntity.LastName  = model.Customer.LastName;
-                foodEntity.Name = model.Food.Name;
+                entity.Food.Name = model.Food.Name;
                 entity.NumOfGuest = model.NumOfGuest;
                 entity.Location = model.Location;
                 entity.DateOfEvent = model.DateOfEvent;
