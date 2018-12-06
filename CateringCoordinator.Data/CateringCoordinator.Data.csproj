@@ -74,6 +74,14 @@
     <Compile Include="Migrations\201812051927467_redidwhatiremoved.Designer.cs">
       <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812061614239_workingonedit.cs" />
+    <Compile Include="Migrations\201812061614239_workingonedit.Designer.cs">
+      <DependentUpon>201812061614239_workingonedit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812061618172_addedavaribletocustomerdata.cs" />
+    <Compile Include="Migrations\201812061618172_addedavaribletocustomerdata.Designer.cs">
+      <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812051927467_redidwhatiremoved.resx">
       <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061614239_workingonedit.resx">
+      <DependentUpon>201812061614239_workingonedit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061618172_addedavaribletocustomerdata.resx">
+      <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

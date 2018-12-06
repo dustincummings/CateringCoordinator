@@ -51,6 +51,7 @@ namespace CateringCoordinator.Services
                             //Event = e.Event.Location,
                             LastName = e.LastName,
                             FirstName = e.FirstName,
+                            FullName =e.FullName,
                         }
                       );
                 return query.ToArray();

@@ -90,6 +90,13 @@ namespace Catering_Coodinator_MVC.Controllers
         {
             var service = CreateEventService();
             var detail = service.GetEventById(id);
+            var customerService = CreateCustomerService();
+            var customers = customerService.GetCustomers();
+            var foodService = CreateFoodService();
+            var foods = foodService.GetFoods();
+            ViewBag.FoodId = new SelectList(foods, "FoodId", "Name", detail.FoodId);
+            ViewBag.CustomerId = new SelectList(customers, "CustomerId", "FullName",detail.CustomerId);
+            
             var model =
                 new EventEdit
                 {
@@ -99,14 +106,25 @@ namespace Catering_Coodinator_MVC.Controllers
                     NumOfGuest = detail.NumOfGuest,
                     Location = detail.Location,
                     DateOfEvent = detail.DateOfEvent,
-
+                    //Food=detail.,
+                    FoodId=detail.FoodId,
+                    //Customer = detail.Customer,
+                    CustomerId = detail.CustomerId
                 };
             return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
          public ActionResult Edit(int id, EventEdit model)
+            
+
         {
+            var customerService = CreateCustomerService();
+            var customers = customerService.GetCustomers();
+            var foodService = CreateFoodService();
+            var foods = foodService.GetFoods();
+            ViewBag.FoodId = new SelectList(foods, "FoodId", "Name");
+            ViewBag.CustomerId = new SelectList(customers, "CustomerId", "FullName");
             if (!ModelState.IsValid) return View(model);
 
             if(model.EventId != id)

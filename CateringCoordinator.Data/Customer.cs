@@ -20,15 +20,23 @@ namespace CateringCoordinator.Data
 
 
         [Display(Name = "Customer")]
+        private string _fullName;
+
         public string FullName
         {
             get
             {
-                return LastName + "," + FirstName;
+                return _fullName;
             }
-          
+            set
+            {
+                _fullName = LastName + "," + FirstName;
+            }
+
         }
-    public ICollection<Event> Events { get; set; }
+        
+
+        public ICollection<Event> Events { get; set; }
 
 
     }

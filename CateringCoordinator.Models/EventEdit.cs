@@ -26,8 +26,11 @@ namespace CateringCoordinator.Models
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of Event")]
         public DateTime? DateOfEvent { get; set; }
+        public string Customer { get; set; }
+        public string Food { get; set; }
 
-        public virtual Customer Customer { get; set; }
-        public virtual Food Food { get; set; }
+
+        //public virtual Customer Customer { get; set; }
+        //public virtual Food Food { get; set; }
     }
 }
