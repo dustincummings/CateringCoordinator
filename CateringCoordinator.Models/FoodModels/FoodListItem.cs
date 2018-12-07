@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CateringCoordinator.Models
+namespace CateringCoordinator.Models.FoodModels
 {
-     public class FoodDetail
+    public class FoodListItem
     {
         public int FoodId { get; set; }
         public string Name { get; set; }
@@ -16,5 +16,11 @@ namespace CateringCoordinator.Models
         public bool Allergens { get; set; }
         public int Servings { get; set; }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
+
+
 }

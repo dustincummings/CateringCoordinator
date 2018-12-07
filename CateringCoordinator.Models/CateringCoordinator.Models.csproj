@@ -54,18 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerCreate.cs" />
-    <Compile Include="CustomerDetail.cs" />
-    <Compile Include="CustomerEdit.cs" />
-    <Compile Include="CustomerList.cs" />
-    <Compile Include="EventCreate.cs" />
-    <Compile Include="EventDetail.cs" />
-    <Compile Include="EventEdit.cs" />
-    <Compile Include="EventList.cs" />
-    <Compile Include="FoodCreate.cs" />
-    <Compile Include="FoodDetail.cs" />
-    <Compile Include="FoodEdit.cs" />
-    <Compile Include="FoodListItem.cs" />
+    <Compile Include="CustomerModels\CustomerCreate.cs" />
+    <Compile Include="CustomerModels\CustomerDetail.cs" />
+    <Compile Include="CustomerModels\CustomerEdit.cs" />
+    <Compile Include="CustomerModels\CustomerList.cs" />
+    <Compile Include="EventModels\EventCreate.cs" />
+    <Compile Include="EventModels\EventDetail.cs" />
+    <Compile Include="EventModels\EventEdit.cs" />
+    <Compile Include="EventModels\EventList.cs" />
+    <Compile Include="FoodModels\FoodCreate.cs" />
+    <Compile Include="FoodModels\FoodDetail.cs" />
+    <Compile Include="FoodModels\FoodEdit.cs" />
+    <Compile Include="FoodModels\FoodListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

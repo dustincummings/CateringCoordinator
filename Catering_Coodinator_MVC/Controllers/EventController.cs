@@ -1,5 +1,6 @@
 ﻿using CateringCoordinator.Data;
 using CateringCoordinator.Models;
+using CateringCoordinator.Models.EventModels;
 using CateringCoordinator.Services;
 using Microsoft.AspNet.Identity;
 using System;

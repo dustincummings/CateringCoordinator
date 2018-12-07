@@ -6,19 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CateringCoordinator.Models
-{
-    public class CustomerCreate
+namespace CateringCoordinator.Models.CustomerModels
     {
-        
-        [Required]
-        [Display(Name = "First Name")]
+    public class CustomerDetail
+    {
+      
+        [Display(Name ="Customer Id")]
+        public int CustomerId { get; set; }
+        [Display(Name ="Event")]
+        public int EventId { get; set; }
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
-        [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        public int EventId { get; set; }
 
         public virtual Event Event { get; set; }
+
     }
 }

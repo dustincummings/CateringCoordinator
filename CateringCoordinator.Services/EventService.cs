@@ -1,6 +1,7 @@
 ﻿using CateringCoodinator.Data;
 using CateringCoordinator.Data;
 using CateringCoordinator.Models;
+using CateringCoordinator.Models.EventModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,14 +76,6 @@ namespace CateringCoordinator.Services
                      .Events
                      .Single(e => e.EventId == eventId && e.OwnerId == _userId);
 
-                //var foodEntity =
-                //    ctx
-                //    .Foods
-                //    .Single(f => f.FoodId == foodId && f.OwnerId == _userId);
-                //var customerEntity =
-                //    ctx
-                //    .Customers
-                //    .Single(c => c.CustomerId == custId && c.OwnerId == _userId);
                 return
                     new EventDetail
                     {
@@ -109,18 +102,9 @@ namespace CateringCoordinator.Services
                     ctx
                     .Events
                     .Single(e => e.EventId == model.EventId && e.OwnerId == _userId);
-                var foodEntity =
-                         ctx
-                         .Foods
-                         .Single(f => f.FoodId == model.FoodId && f.OwnerId == _userId);
-                var customerEntity =
-                    ctx
-                    .Customers
-                    .Single(c => c.CustomerId == model.CustomerId && c.OwnerId == _userId);
 
-
-                customerEntity.FullName  = model.FullName;
-                entity.Food.Name = model.Name;
+                entity.CustomerId  = model.CustomerId;
+                entity.FoodId = model.FoodId;
                 entity.NumOfGuest = model.NumOfGuest;
                 entity.Location = model.Location;
                 entity.DateOfEvent = model.DateOfEvent;

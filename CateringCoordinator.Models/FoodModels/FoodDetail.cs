@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CateringCoordinator.Models
+namespace CateringCoordinator.Models.FoodModels
 {
-    public class FoodEdit
+     public class FoodDetail
     {
         public int FoodId { get; set; }
         public string Name { get; set; }

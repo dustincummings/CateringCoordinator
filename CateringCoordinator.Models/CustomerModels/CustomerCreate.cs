@@ -6,30 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CateringCoordinator.Models
+namespace CateringCoordinator.Models.CustomerModels
 {
-    public class CustomerList
+    public class CustomerCreate
     {
-        [Display(Name ="ID")]
-        public int CustomerId { get; set; }
+        
+        [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
+        [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-
-        private string _fullName;
-
-        public string FullName
-        {
-            get { return _fullName; }
-            set { _fullName  = LastName + "," + FirstName; }
-        }
-
-        
-            
-
         public int EventId { get; set; }
 
-
+        public virtual Event Event { get; set; }
     }
 }
