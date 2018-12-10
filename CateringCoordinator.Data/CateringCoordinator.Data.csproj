@@ -58,77 +58,11 @@
     <Compile Include="Event.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201812041927115_InitialCreate.cs" />
-    <Compile Include="Migrations\201812041927115_InitialCreate.Designer.cs">
-      <DependentUpon>201812041927115_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051915149_firstmigration.cs" />
-    <Compile Include="Migrations\201812051915149_firstmigration.Designer.cs">
-      <DependentUpon>201812051915149_firstmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051920351_fixdatabase.cs" />
-    <Compile Include="Migrations\201812051920351_fixdatabase.Designer.cs">
-      <DependentUpon>201812051920351_fixdatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051927467_redidwhatiremoved.cs" />
-    <Compile Include="Migrations\201812051927467_redidwhatiremoved.Designer.cs">
-      <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061614239_workingonedit.cs" />
-    <Compile Include="Migrations\201812061614239_workingonedit.Designer.cs">
-      <DependentUpon>201812061614239_workingonedit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061618172_addedavaribletocustomerdata.cs" />
-    <Compile Include="Migrations\201812061618172_addedavaribletocustomerdata.Designer.cs">
-      <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812101340017_added-in-a-foreignkey.cs" />
-    <Compile Include="Migrations\201812101340017_added-in-a-foreignkey.Designer.cs">
-      <DependentUpon>201812101340017_added-in-a-foreignkey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812101347372_undid-previous-additions.cs" />
-    <Compile Include="Migrations\201812101347372_undid-previous-additions.Designer.cs">
-      <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812101537138_working-on-list-for-event-foods.cs" />
-    <Compile Include="Migrations\201812101537138_working-on-list-for-event-foods.Designer.cs">
-      <DependentUpon>201812101537138_working-on-list-for-event-foods.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812041927115_InitialCreate.resx">
-      <DependentUpon>201812041927115_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051915149_firstmigration.resx">
-      <DependentUpon>201812051915149_firstmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051920351_fixdatabase.resx">
-      <DependentUpon>201812051920351_fixdatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051927467_redidwhatiremoved.resx">
-      <DependentUpon>201812051927467_redidwhatiremoved.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061614239_workingonedit.resx">
-      <DependentUpon>201812061614239_workingonedit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061618172_addedavaribletocustomerdata.resx">
-      <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812101340017_added-in-a-foreignkey.resx">
-      <DependentUpon>201812101340017_added-in-a-foreignkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812101347372_undid-previous-additions.resx">
-      <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812101537138_working-on-list-for-event-foods.resx">
-      <DependentUpon>201812101537138_working-on-list-for-event-foods.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

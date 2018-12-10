@@ -17,17 +17,14 @@ namespace CateringCoordinator.Models.CustomerModels
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        private string _fullName;
 
+        private string _fullName;
+        [Display(Name ="Customer")]
         public string FullName
         {
             get { return _fullName; }
             set { _fullName  = LastName + "," + FirstName; }
         }
-
-        
-            
-
         public int EventId { get; set; }
 
 

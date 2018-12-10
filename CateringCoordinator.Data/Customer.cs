@@ -19,9 +19,9 @@ namespace CateringCoordinator.Data
         public string FirstName { get; set; }
 
 
-        [Display(Name = "Customer")]
         private string _fullName;
 
+        [Display(Name = "Customer")]
         public string FullName
         {
             get

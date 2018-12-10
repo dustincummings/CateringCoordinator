@@ -30,35 +30,35 @@ namespace Catering_Coodinator_MVC.Controllers
         {
             var customerService = CreateCustomerService();
             var customers = customerService.GetCustomers();
-            //var foodService = CreateFoodService();
-            //var foods = foodService.GetFoods();
-            //ViewBag.FoodId =  new SelectList(foods, "FoodId", "Name");
+            var foodService = CreateFoodService();
+            var foods = foodService.GetFoods();
+            ViewBag.FoodId = new SelectList(foods, "FoodId", "Name");
             ViewBag.CustomerId = new SelectList(customers, "CustomerId","FullName");
 
-            var food = new FoodListItem();
-            food.Food = new List<FoodListItem>();
-            PopulateFoodData(food);
+            //var food = new FoodListItem();
+            //food.Food = new List<FoodListItem>();
+            //PopulateFoodData(food);
 
             return View();
         }
 
-        private void PopulateFoodData(FoodListItem food)
-        {
-            var foodService = CreateFoodService();
-            var allFoods = foodService.GetFoods();
+        //private void PopulateFoodData(FoodListItem food)
+        //{
+        //    var foodService = CreateFoodService();
+        //    var allFoods = foodService.GetFoods();
 
-            var viewModel = new List<FoodListItem>();
+        //    var viewModel = new List<FoodListItem>();
 
-            foreach (var foods in allFoods)
-            {
-                viewModel.Add(new FoodListItem
-                {
-                    FoodId = food.FoodId,
-                    Name = food.Name
-                });
-            }
-            ViewBag.AllEventFoods = viewModel;
-        }
+        //    foreach (var foods in allFoods)
+        //    {
+        //        viewModel.Add(new FoodListItem
+        //        {
+        //            FoodId = foods.FoodId,
+        //            Name = foods.Name
+        //        });
+        //    }
+        //    ViewBag.AllEventFoods = viewModel;
+        //}
 
         private FoodService CreateFoodService()
         {
@@ -80,6 +80,16 @@ namespace Catering_Coodinator_MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(EventCreate model)
         {
+            //if(selectedFoods != null)
+            //{
+            //    foreach (var food in selectedFoods)
+            //    {
+            //        var eventService = CreateEventService();
+            //        var foodId = int.Parse(food);
+            //        model.FoodId = foodId;
+            //        eventService.CreateEvent(model);
+            //    }
+            //}
             if (!ModelState.IsValid)
             {
             return View(model);
@@ -102,6 +112,8 @@ namespace Catering_Coodinator_MVC.Controllers
             var service = new EventService(userId);
             return service;
         }
+
+        
 
         public ActionResult Details(int id)
         {

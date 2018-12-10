@@ -22,8 +22,8 @@ namespace CateringCoordinator.Models.EventModels
         public DateTime? DateOfEvent { get; set; }
 
 
-        //public virtual Customer Customer { get; set; }
-        public virtual ICollection<FoodListItem> Food { get; set; }
+        public virtual Customer Customer { get; set; }
+        //public virtual ICollection<FoodListItem> Food { get; set; }
 
 
     }

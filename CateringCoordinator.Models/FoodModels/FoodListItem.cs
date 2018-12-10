@@ -17,7 +17,7 @@ namespace CateringCoordinator.Models.FoodModels
         public bool Allergens { get; set; }
         public int Servings { get; set; }
 
-        public virtual ICollection<FoodListItem> Food { get; set; }
+        public virtual Food Food { get; set; }
     }
 
 

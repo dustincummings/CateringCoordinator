@@ -42,8 +42,10 @@ namespace CateringCoordinator.Services
 
         public IEnumerable<FoodListItem> GetFoods()
         {
+
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
                     ctx
                     .Foods
@@ -59,6 +61,7 @@ namespace CateringCoordinator.Services
                             Cost = e.Cost,
                             Allergens = e.Allergens,
                             Servings = e.Servings,
+                            
                         }
                       );
                 return query.ToArray();

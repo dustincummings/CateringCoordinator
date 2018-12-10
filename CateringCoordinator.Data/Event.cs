@@ -28,7 +28,6 @@ namespace CateringCoordinator.Data
        
 
         public virtual Food Food { get; set; }
-        //public virtual ICollection<Food> Foods { get; set; }
         public virtual Customer Customer { get; set; }
     }
 }

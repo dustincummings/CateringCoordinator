@@ -4,6 +4,8 @@ using CateringCoordinator.Models;
 using CateringCoordinator.Models.EventModels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +45,7 @@ namespace CateringCoordinator.Services
 
         public IEnumerable<EventList> GetEvents()
         {
+           
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
@@ -63,6 +66,7 @@ namespace CateringCoordinator.Services
                             DateOfEvent = e.DateOfEvent,
                         }
                      );
+
                 return query.ToArray();
             }
         }
