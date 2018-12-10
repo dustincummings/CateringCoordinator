@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CateringCoordinator.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,7 @@ namespace CateringCoordinator.Models.FoodModels
         public bool Allergens { get; set; }
         public int Servings { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public virtual ICollection<FoodListItem> Food { get; set; }
     }
 
 

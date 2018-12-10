@@ -90,6 +90,10 @@
     <Compile Include="Migrations\201812101347372_undid-previous-additions.Designer.cs">
       <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101537138_working-on-list-for-event-foods.cs" />
+    <Compile Include="Migrations\201812101537138_working-on-list-for-event-foods.Designer.cs">
+      <DependentUpon>201812101537138_working-on-list-for-event-foods.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812101347372_undid-previous-additions.resx">
       <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101537138_working-on-list-for-event-foods.resx">
+      <DependentUpon>201812101537138_working-on-list-for-event-foods.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

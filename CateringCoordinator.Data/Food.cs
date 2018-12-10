@@ -29,6 +29,7 @@ namespace CateringCoordinator.Data
         [Required]
         public int Servings { get; set; }
 
+
         public virtual ICollection<Event> Events { get; set; }
     }
 }

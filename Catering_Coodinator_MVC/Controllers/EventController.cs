@@ -1,6 +1,7 @@
 ﻿using CateringCoordinator.Data;
 using CateringCoordinator.Models;
 using CateringCoordinator.Models.EventModels;
+using CateringCoordinator.Models.FoodModels;
 using CateringCoordinator.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -29,11 +30,34 @@ namespace Catering_Coodinator_MVC.Controllers
         {
             var customerService = CreateCustomerService();
             var customers = customerService.GetCustomers();
-            var foodService = CreateFoodService();
-            var foods = foodService.GetFoods();
-            ViewBag.FoodId =  new SelectList(foods, "FoodId", "Name");
+            //var foodService = CreateFoodService();
+            //var foods = foodService.GetFoods();
+            //ViewBag.FoodId =  new SelectList(foods, "FoodId", "Name");
             ViewBag.CustomerId = new SelectList(customers, "CustomerId","FullName");
+
+            var food = new FoodListItem();
+            food.Food = new List<FoodListItem>();
+            PopulateFoodData(food);
+
             return View();
+        }
+
+        private void PopulateFoodData(FoodListItem food)
+        {
+            var foodService = CreateFoodService();
+            var allFoods = foodService.GetFoods();
+
+            var viewModel = new List<FoodListItem>();
+
+            foreach (var foods in allFoods)
+            {
+                viewModel.Add(new FoodListItem
+                {
+                    FoodId = food.FoodId,
+                    Name = food.Name
+                });
+            }
+            ViewBag.AllEventFoods = viewModel;
         }
 
         private FoodService CreateFoodService()
