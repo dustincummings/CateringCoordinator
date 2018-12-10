@@ -82,6 +82,14 @@
     <Compile Include="Migrations\201812061618172_addedavaribletocustomerdata.Designer.cs">
       <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101340017_added-in-a-foreignkey.cs" />
+    <Compile Include="Migrations\201812101340017_added-in-a-foreignkey.Designer.cs">
+      <DependentUpon>201812101340017_added-in-a-foreignkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101347372_undid-previous-additions.cs" />
+    <Compile Include="Migrations\201812101347372_undid-previous-additions.Designer.cs">
+      <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061618172_addedavaribletocustomerdata.resx">
       <DependentUpon>201812061618172_addedavaribletocustomerdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101340017_added-in-a-foreignkey.resx">
+      <DependentUpon>201812101340017_added-in-a-foreignkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101347372_undid-previous-additions.resx">
+      <DependentUpon>201812101347372_undid-previous-additions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

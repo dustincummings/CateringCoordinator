@@ -20,8 +20,8 @@ namespace CateringCoordinator.Models.EventModels
         [Display(Name = "Date of Event")]
         public DateTime? DateOfEvent { get; set; }
 
-        public virtual Customer Customer { get; set; }
-        public virtual Food Food { get; set; }
+        //public virtual Customer Customer { get; set; }
+        //public virtual Food Food { get; set; }
       
 
     }
