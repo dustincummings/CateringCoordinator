@@ -62,28 +62,22 @@
         font-weight:bold;
 
     }
-
 /*Event Edit*/
 .body-content#eventEdit {
     background-image: url('Assets/people eating.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
-
     .body-content#eventEdit h2 {
         color: black;
         padding-bottom: 1em;
     }
-
-    
-
 /*Event Detail*/
 .body-content#eventDetail {
     background-image: url('Assets/people eating.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
-
     .body-content#eventDetail h2 {
         color: black;
         padding-bottom: 1em;
@@ -93,35 +87,60 @@
     font-weight: bolder;
     font-size: 1.5em;
 }
-
  #eventDetail dd {
     color: black;
     font-weight: bold;
     font-size: 1.5em;
 }
-
 .body-content p {
     color: black;
 }
-
-
-
 .font-size {
     color: black;
     font-size: 1.5em;
     font-weight: bold;
 }
-
 /*Event Delete*/
-
+.body-content#eventDelete {
+    background-image: url('Assets/people eating.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-content#eventDelete h2 {
+    color: black;
+    padding-bottom: 1em;
+}
+.body-content#eventDelete h3{
+    color:black;
+}
+#eventDelete dt {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+#eventDelete dd {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.body-content p {
+    color: black;
+}
+.font-size {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(107, 107, 107, .5);
+    background-color: rgba(231, 249, 239, .5);
+    /*background-color: rgba(107, 107, 107, .25);*/
     border-radius: 1em;
     margin-top: 10em;
 }
+
 
     /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
