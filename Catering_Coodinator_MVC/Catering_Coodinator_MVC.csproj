@@ -209,6 +209,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\fast icon %282%29.png" />
+    <Content Include="Content\Assets\fast icon.png" />
+    <Content Include="Content\Assets\logo.png" />
+    <Content Include="Content\Assets\logo2.png" />
+    <Content Include="Content\Assets\logo3.png" />
+    <Content Include="Content\Assets\people eating.jpg" />
+    <Content Include="Content\Assets\photo-1523145149804-5d8e0c044753.jpg" />
+    <Content Include="Content\Assets\plates of food.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -221,7 +229,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\CateringCoodinator - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

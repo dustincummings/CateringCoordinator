@@ -3,12 +3,11 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+<body class="body-content" id="eventDetail">
+<h2><strong>Event Details</strong></h2>
 
 <div>
-    <h4>Event Detail</h4>
-    <hr />
+    
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.FullName)
@@ -59,8 +58,9 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.EventId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }, new{ @class = "btn btn-warning" }) 
+    @Html.ActionLink("Delete", "Delete", new { id = Model.EventId }, new{ @class = "btn btn-danger" }) 
 
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index","", new{ @class = "btn btn-primary" })
 </p>
+</body>

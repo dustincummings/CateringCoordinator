@@ -1,20 +1,134 @@
-﻿body {
+﻿/*NavBar CSS*/
+
+
+/*Body CSS*/
+/*body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('Assets/photo-1523145149804-5d8e0c044753.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    
+}*/
+.jumbotron {
+    background-position:left;
+    background-image: url('Assets/logo3.png')  ;
+    background-repeat: no-repeat;
+    padding:5em;
+    background-color:dimgrey;
+
 }
+/*Event Index*/
+.body-content#event {
+    background-image: url('Assets/people eating.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-content#event a{
+    /*color:black;*/
+}
+.body-content#event h2{
+    color:black;
+}
+.body-content th{
+    color:black;
+    font-weight:bolder;
+    font-size: 2em;
+}
+.body-content td{
+    color:black;
+    font-weight:bold;
+}
+.body-content p {
+    color: black;
+}
+/*Event Create*/
+.body-content#eventCreate{
+    background-image: url('Assets/people eating.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .body-content#eventCreate h2{
+        color:black;
+        padding-bottom: 1em;
+    }
+    #eventCreate .form-horizontal {
+       position: center;
+    }
+    .font-size{
+        color:black;
+        font-size: 1.5em;
+        font-weight:bold;
+
+    }
+
+/*Event Edit*/
+.body-content#eventEdit {
+    background-image: url('Assets/people eating.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .body-content#eventEdit h2 {
+        color: black;
+        padding-bottom: 1em;
+    }
+
+    
+
+/*Event Detail*/
+.body-content#eventDetail {
+    background-image: url('Assets/people eating.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .body-content#eventDetail h2 {
+        color: black;
+        padding-bottom: 1em;
+    }
+#eventDetail dt {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+ #eventDetail dd {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.body-content p {
+    color: black;
+}
+
+
+
+.font-size {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*Event Delete*/
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: rgba(107, 107, 107, .5);
+    border-radius: 1em;
+    margin-top: 10em;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
+    /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
-}
+    .dl-horizontal dt {
+        white-space: normal;
+    }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -22,3 +136,6 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Footer CSS*/
+

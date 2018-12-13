@@ -3,79 +3,80 @@
 @{
     ViewBag.Title = "Create";
 }
+<body class="body-content" id="eventCreate">
+    <h2><strong>Create an Event</strong></h2>
 
-<h2>Event Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.FoodId, "Food", htmlAttributes: new { @class = "control-label col-md-2 font-size" })
+                <div class="col-lg-10">
+                    @Html.DropDownList("FoodId", null, "Please Select a Food ", htmlAttributes: new { @class = "form-control" })
+                    <p>@Html.ActionLink("Add New Food", "../Food/Create","", new { @class = "btn btn-primary btn-sm" })</p>
+                    @Html.ValidationMessageFor(model => model.FoodId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CustomerId, "Customer Name", htmlAttributes: new { @class = "control-label col-md-2 font-size" })
+                <div class="col-md-10">
+                    @Html.DropDownList("CustomerId", null, "Please Select Customer", htmlAttributes: new { @class = "form-control" })
+                    <p>@Html.ActionLink("Add New Customer", "../Customer/Create","", new { @class = "btn btn-primary btn-sm" })</p>
+                    @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.LabelFor(model => model.NumOfGuest, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NumOfGuest, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NumOfGuest, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-    <div class="form-horizontal">
-       
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.FoodId, "Food", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("FoodId", null, "Please Select a Food ", htmlAttributes: new { @class = "form-control" })
-                <p>@Html.ActionLink("Add New Food", "../Food/Create")</p>
-                @Html.ValidationMessageFor(model => model.FoodId, "", new { @class = "text-danger" })
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DateOfEvent, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DateOfEvent, new { htmlAttributes = new { @class = "form-control " } })
+                    @Html.ValidationMessageFor(model => model.DateOfEvent, "", new { @class = "text-danger font-size" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
             </div>
         </div>
+    }
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CustomerId, "Customer Name", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("CustomerId", null, "Please Select Customer", htmlAttributes: new { @class = "form-control" })
-                <p>@Html.ActionLink("Add New Customer", "../Customer/Create")</p>
-                @Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NumOfGuest, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NumOfGuest, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NumOfGuest, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfEvent, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateOfEvent, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfEvent, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+    <div>
+        @Html.ActionLink("Back to List", "Index","", new { @class = "btn btn-danger" })
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>

@@ -3,22 +3,23 @@
 @{
     ViewBag.Title = "Index";
 }
+<body class="body-content" id="event">
 
-<h2>List of Events</h2>
+    @if (TempData.ContainsKey("SaveResult"))
+    {
+        <div class="alert alert-success fade in" role="alert">
+            @ViewBag.SaveResult
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            @TempData["SaveResult"]
+        </div>
+    }
+    <h2><strong><b>List of Events</b></strong></h2>
 
-<p>
-    @Html.ActionLink("Create New Event", "Create")
-</p>
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
-        @ViewBag.SaveResult
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-        @TempData["SaveResult"]
-    </div>
-}
+    <p>
+        @Html.ActionLink("Create New Event", "Create","", new { @class = "btn btn-primary" })
+    </p>
     <table class="table">
         <tr>
             <th>
@@ -57,12 +58,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.DateOfEvent)
                 </td>
+                
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.EventId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EventId }, new{@class = "btn btn-warning"}) 
+                    @Html.ActionLink("Details", "Details", new { id = item.EventId }, new { @class = "btn btn-success" }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EventId }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
 
     </table>
+</body>
