@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Edit";
 }
-
-<h2>Edit</h2>
+<body class="body-food" id="foodCreate">
+<h2><strong>Edit Food Item</strong></h2>
 
 
 @using (Html.BeginForm())
@@ -12,13 +12,11 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>FoodEdit</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.FoodId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -26,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
@@ -34,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Ingrediants, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Ingrediants, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Ingrediants, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ingrediants, "", new { @class = "text-danger" })
@@ -42,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Cost, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Cost, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Cost, "", new { @class = "text-danger" })
@@ -50,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Allergens, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Allergens, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Allergens)
@@ -60,7 +58,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Servings, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Servings, htmlAttributes: new { @class = "control-label col-md-2 font-size" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Servings, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Servings, "", new { @class = "text-danger" })
@@ -68,17 +66,18 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+            <div class="col-md-offset-4 col-md-8">
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index","",new { @class = "btn btn-primary" })
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+</body>

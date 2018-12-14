@@ -3,21 +3,11 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+<body class="body-food" id="foodDetail"></body>
+<h2><strong>Food Item Details</strong></h2>
 
 <div>
-    <h4>FoodDetail</h4>
-    <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FoodId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FoodId)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -69,6 +59,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FoodId  }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FoodId  }, new { @class = "btn btn-warning" }) 
+    @Html.ActionLink("Back to List", "Index","",new { @class = "btn btn-primary" })
 </p>

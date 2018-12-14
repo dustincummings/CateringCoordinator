@@ -39,9 +39,11 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index","",new { @class = "btn btn-danger" })
-</div>
+    <div>
+        @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-primary" })
+        @Html.ActionLink("Back to Event", "../Event/Create", "", new { @class = "btn btn-info" })
+
+    </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
