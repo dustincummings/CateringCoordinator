@@ -1,28 +1,34 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<body class="homepage">
 <div class="jumbotron">
-  
-    <p><a href="@Url.Action("Index","Event")" class="btn btn-primary btn-lg">Events</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Welcome to your Catering Coordinator</h2>
-        <p>
-          This coordinator will help with keeping all of your catering events on schedule.
-        </p>
-        <p><a href='@Url.Action("Index","Food")'>
-    <img src="~/Content/Assets/plates of food.jpg" /></a></p>
-</div>
-    <div class="col-md-4">
-        <h2>View Your Customers</h2>
-        @Html.ActionLink("Customers", "Index", "Customer")
+    <div class="row">
+        <div class="col-md-offset-4">
+            <p><strong><b>This coordinator is for those caterers that would like to have all of their event information in one spot.</b></strong></p>
+        </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>2a
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Welcome to your Catering Coordinator</h2>
+                <p>
+                    This coordinator will help with keeping all of your catering events on schedule.
+                </p>
+                <p>
+                    <a href='@Url.Action("Index","Food")'>
+                        @*<img src="~/Content/Assets/plates of food.jpg" />*@
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>View Your Customers</h2>
+                @Html.ActionLink("Customers", "Index", "Customer")
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </div>
+        </div>
+    </body>

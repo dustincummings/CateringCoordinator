@@ -212,12 +212,15 @@
     <Content Include="Content\Assets\customer.jpg" />
     <Content Include="Content\Assets\fast icon %282%29.png" />
     <Content Include="Content\Assets\fast icon.png" />
+    <Content Include="Content\Assets\lock.jpg" />
     <Content Include="Content\Assets\logo.png" />
     <Content Include="Content\Assets\logo2.png" />
     <Content Include="Content\Assets\logo3.png" />
     <Content Include="Content\Assets\people eating.jpg" />
     <Content Include="Content\Assets\photo-1523145149804-5d8e0c044753.jpg" />
     <Content Include="Content\Assets\plates of food.jpg" />
+    <Content Include="Content\Assets\register.jpg" />
+    <Content Include="Content\Assets\table.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

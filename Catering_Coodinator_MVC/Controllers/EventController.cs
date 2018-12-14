@@ -137,7 +137,7 @@ namespace Catering_Coodinator_MVC.Controllers
             var model =
                 new EventEdit
                 {
-                    EventId = detail.EventId,
+                    EventId = id,
                     FullName  = detail.FullName,                   
                     Name = detail.FoodName,
                     NumOfGuest = detail.NumOfGuest,
