@@ -17,7 +17,7 @@ namespace CateringCoordinator.Models.FoodModels
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string Description { get; set; }
         [Required]
-        public string Ingrediants { get; set; }
+        public string Ingredients { get; set; }
         [Required]
         public decimal Cost { get; set; }
         [Required]

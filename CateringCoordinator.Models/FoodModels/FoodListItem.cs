@@ -12,7 +12,7 @@ namespace CateringCoordinator.Models.FoodModels
         public int FoodId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Ingrediants { get; set; }
+        public string Ingredients { get; set; }
         public decimal Cost { get; set; }
         public bool Allergens { get; set; }
         public int Servings { get; set; }

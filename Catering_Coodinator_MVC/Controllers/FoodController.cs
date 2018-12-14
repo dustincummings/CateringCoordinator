@@ -67,7 +67,7 @@ namespace Catering_Coodinator_MVC.Controllers
                     FoodId = detail.FoodId,
                     Name = detail.Name,
                     Description = detail.Description,
-                    Ingrediants = detail.Ingrediants,
+                    Ingredients = detail.Ingredients,
                     Cost = detail.Cost,
                     Allergens = detail.Allergens,
                     Servings = detail.Servings,

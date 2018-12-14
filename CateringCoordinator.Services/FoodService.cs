@@ -28,7 +28,7 @@ namespace CateringCoordinator.Services
                     OwnerId = _userId,
                     Name = model.Name,
                     Description = model.Description,
-                    Ingrediants = model.Ingrediants,
+                    Ingrediants = model.Ingredients,
                     Cost = model.Cost,
                     Allergens = model.Allergens,
                     Servings = model.Servings,
@@ -57,7 +57,7 @@ namespace CateringCoordinator.Services
                             FoodId = e.FoodId,
                             Name = e.Name,
                             Description = e.Description,
-                            Ingrediants = e.Ingrediants,
+                            Ingredients = e.Ingrediants,
                             Cost = e.Cost,
                             Allergens = e.Allergens,
                             Servings = e.Servings,
@@ -82,7 +82,7 @@ namespace CateringCoordinator.Services
                         FoodId = entity.FoodId,
                         Name = entity.Name,
                         Description = entity.Description,
-                        Ingrediants = entity.Ingrediants,
+                        Ingredients = entity.Ingrediants,
                         Cost = entity.Cost,
                         Allergens = entity.Allergens,
                         Servings = entity.Servings,
@@ -103,7 +103,7 @@ namespace CateringCoordinator.Services
 
                 entity.Name = model.Name;
                 entity.Description = model.Description;
-                entity.Ingrediants = model.Ingrediants;
+                entity.Ingrediants = model.Ingredients;
                 entity.Cost = model.Cost;
                 entity.Allergens = model.Allergens;
                 entity.Servings = model.Servings;

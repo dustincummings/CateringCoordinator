@@ -2,28 +2,33 @@
 
 
 /*Body CSS*/
-/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-image: url('Assets/photo-1523145149804-5d8e0c044753.jpg') ;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    
-}*/
+
 .jumbotron {
-    background-position:left;
-    background-image: url('Assets/logo3.png')  ;
+    background-position: left;
+    background-image: url('Assets/logo3.png');
     background-repeat: no-repeat;
-    padding:4em;
-    background-color:dimgrey;
+    padding: 4em;
+    background-color: rgba(105, 105, 105,0);
+    
 }
+
 .homepage {
     /*background-image: url('Assets/table.jpg');*/
     background-image: url('Assets/logo3.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
+.homepage .row h2{
+    color:black;
+
+}
+.homepage .row p{
+    color:black;
+    font-weight:bold;
+}
+    .homepage .body-content {
+        background-color: rgba(231, 249, 239, 0);
+    }
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -33,6 +38,7 @@
     margin-top: 5em;
     
 }
+
 /*Event Index*/
 .body-content#event {
     background-image: url('Assets/people eating.jpg');
@@ -152,6 +158,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.body-customer .body-content {
+    background-color: rgba(231, 249, 239, .05);
+}
 .body-customer h2{
     color:black;
     padding-bottom:1.5em;
@@ -189,6 +198,9 @@
     background-size:cover;
     background-repeat:no-repeat;
 }
+    .body-food .body-content {
+        background-color: rgba(231, 249, 239, 0.25);
+    }
 .body-food h2{
     color:black;
     padding-bottom:1.5em; 
