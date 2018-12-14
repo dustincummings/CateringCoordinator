@@ -3,11 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<body class="body-customer" id="customer">
+<h2><strong>List Of Customers</strong></h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Customer", "Create","", new{ @class="btn btn-primary"})
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -45,11 +45,12 @@
             @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.CustomerId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CustomerId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }, new { @class = "btn btn-warning" }) 
+            @Html.ActionLink("Details", "Details", new { id = item.CustomerId }, new { @class = "btn btn-success" }) 
+            @Html.ActionLink("Delete", "Delete", new { id = item.CustomerId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
 
 </table>
+</body>

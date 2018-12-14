@@ -3,30 +3,13 @@
 @{
     ViewBag.Title = "Delete";
 }
+<body class="body-customer" id="customerDelete">
+<h2><strong>Delete Customer Info</strong></h2>
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to delete this customer's info?</h3>
 <div>
-    <h4>CustomerDetail</h4>
-    <hr />
+  
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CustomerId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EventId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EventId)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.LastName)
         </dt>
@@ -49,8 +32,9 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index","",new {@class="btn btn-primary"})
         </div>
     }
 </div>
+</body>

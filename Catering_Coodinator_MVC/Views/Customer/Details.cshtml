@@ -3,12 +3,12 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Customer Info</h2>
+<body class="body-customer"id="customerDetail">
+<h2><strong>Customer Info</strong></h2>
 
 <div>
    
-    <hr />
+    
     <dl class="dl-horizontal">
 
 
@@ -30,7 +30,8 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }) |
-    @Html.ActionLink("Delete", "Delete", new { id =Model.CustomerId}) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }, new { @class = "btn btn-warning" }) 
+    @Html.ActionLink("Delete", "Delete", new { id =Model.CustomerId}, new { @class = "btn btn-danger" }) 
+    @Html.ActionLink("Back to List", "Index","",new {@class="btn btn-primary"})
 </p>
+</body>

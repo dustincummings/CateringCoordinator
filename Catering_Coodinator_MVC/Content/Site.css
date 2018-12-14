@@ -19,6 +19,14 @@
     background-color:dimgrey;
 
 }
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+    background-color: rgba(231, 249, 239, .5);
+    /*background-color: rgba(107, 107, 107, .25);*/
+    border-radius: 1em;
+    margin-top: 10em;
+}
 /*Event Index*/
 .body-content#event {
     background-image: url('Assets/people eating.jpg');
@@ -131,15 +139,47 @@
     font-size: 1.5em;
     font-weight: bold;
 }
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: rgba(231, 249, 239, .5);
-    /*background-color: rgba(107, 107, 107, .25);*/
-    border-radius: 1em;
-    margin-top: 10em;
+/*Customer Index*/
+.body-customer {
+    background-image: url('Assets/customer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.body-customer h2{
+    color:black;
+    padding-bottom:1.5em;
+}
+/*Customer Create*/
+
+/*Customer Detail*/
+
+#customerDetail dt{
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#customerDetail dd {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/*Customer Edit*/
+
+/*Customer Delete*/
+#customerDelete dt {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+#customerDelete dd {
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+#customerDelete h3{
+    color:black;
+}
+/* Set padding to keep content from hitting the edges */
 
 
     /* Override the default bootstrap behavior where horizontal description lists 
@@ -154,6 +194,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+    font-weight:bolder;
+    text-align:center;
 }
 
 /*Footer CSS*/
