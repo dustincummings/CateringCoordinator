@@ -14,16 +14,16 @@
 
 .homepage {
     /*background-image: url('Assets/table.jpg');*/
-    background-image: url('Assets/logo3.png');
+    background-color: #3a3a3a;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .homepage .row h2{
-    color:black;
+    color:navajowhite;
 
 }
 .homepage .row p{
-    color:black;
+    color:navajowhite;
     font-weight:bold;
 }
     .homepage .body-content {
@@ -60,6 +60,7 @@
 .body-content td{
     color:black;
     font-weight:bold;
+   
 }
 .body-content p {
     color: black;
@@ -162,25 +163,36 @@
     background-color: rgba(231, 249, 239, .05);
 }
 .body-customer h2{
-    color:black;
+    color:navajowhite;
     padding-bottom:1.5em;
+}
+.body-customer .body-content th {
+    color: navajowhite;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.body-customer .body-content td {
+    color: navajowhite;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 /*Customer Create*/
 /*Customer Detail*/
 #customerDetail dt{
-    color: black;
+    color: navajowhite;
     font-weight: bold;
     font-size: 1.5em;
 }
 #customerDetail dd {
-    color: black;
+    color: navajowhite;
     font-weight: bold;
     font-size: 1.5em;
 }
 /*Customer Edit*/
 /*Customer Delete*/
 #customerDelete dt {
-    color: black;
+    color: navajowhite;
     font-weight: bolder;
     font-size: 1.5em;
 }
@@ -202,7 +214,7 @@
         background-color: rgba(231, 249, 239, 0.25);
     }
 .body-food h2{
-    color:black;
+    color:navajowhite;
     padding-bottom:1.5em; 
 }
     .body-food dd {
@@ -211,7 +223,7 @@
         font-size: 1.5em;
     }
     .body-food dt {
-        color: black;
+        color: black ;
         font-weight: bolder;
         font-size: 1.5em;
     }

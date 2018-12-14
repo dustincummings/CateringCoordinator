@@ -24,13 +24,22 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>View Your Customers</h2>
-            @Html.ActionLink("Customers", "Index", "Customer")
+            <h2><strong>Customers</strong></h2>
+            <p>
+                Click on the picture below to view, create, edit, or delete your customers.
+            </p>
+            <a href='@Url.Action("Index", "Customer")'>
+                <img class="img-rounded" src="~/Content/Assets/customer.jpg" width="304" height="236" />
+            </a>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <h2><strong>Events</strong></h2>
+                    <p>
+                        Click on the picture below to take you to the view, create, edit, or delete your food items.
+                    </p>
+                    <a  href='@Url.Action("Index","Event")'>
+                        <img class="img-"rounded" src="~/Content/Assets/people eating.jpg" width="304" height="236"/>
+                    </a>
         </div>
     </div>
 </body>
