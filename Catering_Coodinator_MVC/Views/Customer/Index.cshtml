@@ -4,11 +4,6 @@
     ViewBag.Title = "Index";
 }
 <body class="body-customer" id="customer">
-<h2><strong>List Of Customers</strong></h2>
-
-<p>
-    @Html.ActionLink("Create New Customer", "Create","", new{ @class="btn btn-primary"})
-</p>
 @if (TempData.ContainsKey("SaveResult"))
 {
 <div class="alert alert-success fade in" role="alert">
@@ -19,6 +14,12 @@
     @TempData["SaveResult"]
 </div>
 }
+<h2><strong>List Of Customers</strong></h2>
+
+<p>
+    @Html.ActionLink("Create New Customer", "Create","", new{ @class="btn btn-primary"})
+</p>
+
 <table class="table">
     <tr>
         <th>
