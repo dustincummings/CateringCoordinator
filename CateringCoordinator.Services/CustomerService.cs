@@ -1,4 +1,5 @@
 ﻿using CateringCoodinator.Data;
+using CateringCoordinator.Contracts;
 using CateringCoordinator.Data;
 using CateringCoordinator.Models;
 using CateringCoordinator.Models.CustomerModels;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-    public class CustomerService
+    public class CustomerService:ICustomer
     {
         private readonly Guid _userId;
 

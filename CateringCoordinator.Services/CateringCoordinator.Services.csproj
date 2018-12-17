@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CateringCoordinator.Contracts\CateringCoordinator.Contracts.csproj">
+      <Project>{5F6A2758-2CB6-4661-B857-C13306F4E4B0}</Project>
+      <Name>CateringCoordinator.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CateringCoordinator.Data\CateringCoordinator.Data.csproj">
       <Project>{6e1f5521-aeb6-4b73-bc02-253ab44257d6}</Project>
       <Name>CateringCoordinator.Data</Name>

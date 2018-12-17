@@ -1,4 +1,5 @@
 ﻿using CateringCoodinator.Data;
+using CateringCoordinator.Contracts;
 using CateringCoordinator.Data;
 using CateringCoordinator.Models;
 using CateringCoordinator.Models.EventModels;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CateringCoordinator.Services
 {
-    public class EventService 
+    public class EventService : IEvent
     {
         private readonly Guid _userId;
 

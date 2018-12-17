@@ -7,11 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CateringCoordinator.Contracts;
 
 namespace CateringCoordinator.Services
 {
 
-    public class FoodService
+    public class FoodService: IFood
+
     {
         private readonly Guid _userId;
 

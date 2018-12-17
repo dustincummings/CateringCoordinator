@@ -22,6 +22,10 @@
     background-color: rgba(105, 105, 105,0);
     
 }
+.container .navbar-header, .container .nav {
+    font-family: 'Pirata One';
+    font-size:1.5em;
+}
 
 .homepage {
     /*background-image: url('Assets/table.jpg');*/
@@ -72,9 +76,6 @@
     background-image: url('Assets/people eating.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-.body-content#event a{
-    /*color:black;*/
 }
 .body-content#event h2{
     color:black;
