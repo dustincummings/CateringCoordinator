@@ -13,6 +13,10 @@ using CateringCoodinator.Data;
 
 namespace Catering_Coodinator_MVC.Controllers
 {
+#if !DEBUG
+    [RequireHTTPS]
+#endif
+
     [Authorize]
     public class AccountController : Controller
     {
@@ -424,7 +428,7 @@ namespace Catering_Coodinator_MVC.Controllers
             base.Dispose(disposing);
         }
 
-        #region Helpers
+#region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -481,6 +485,6 @@ namespace Catering_Coodinator_MVC.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
-        #endregion
+#endregion
     }
 }

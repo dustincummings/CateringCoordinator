@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CateringCoordinator.Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CateringCoordinator.Tests", "CateringCoordinator.Tests\CateringCoordinator.Tests.csproj", "{97974392-7332-4AF3-9186-DE401EABEB50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catering_Coodinator.WebApi", "Catering_Coodinator.WebApi\Catering_Coodinator.WebApi.csproj", "{CCF6D6EB-B1AD-47D7-A514-6ECB6FA6E934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{97974392-7332-4AF3-9186-DE401EABEB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97974392-7332-4AF3-9186-DE401EABEB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97974392-7332-4AF3-9186-DE401EABEB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF6D6EB-B1AD-47D7-A514-6ECB6FA6E934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF6D6EB-B1AD-47D7-A514-6ECB6FA6E934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF6D6EB-B1AD-47D7-A514-6ECB6FA6E934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF6D6EB-B1AD-47D7-A514-6ECB6FA6E934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
